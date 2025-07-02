@@ -1,53 +1,22 @@
 # Airdrop
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elcoin Airdrop</title>
-  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-900 text-white font-sans min-h-screen flex flex-col items-center justify-center p-4">
+# 🚀 ELCOIN EXCHANGE
 
-  <div class="text-center space-y-4">
-    <h1 class="text-4xl font-bold text-yellow-400">🎁 Elcoin Airdrop</h1>
-    <p class="text-lg">Connecte ton wallet et reçois <strong>100 EL</strong> gratuitement !</p>
+Bienvenue sur le projet **ELCOIN** – Une plateforme d’échange, staking et airdrop de cryptomonnaie.
 
-    <button onclick="connectWallet()" class="bg-yellow-400 text-black px-4 py-2 rounded shadow hover:bg-yellow-300">🔗 Connecter Wallet</button>
+---
 
-    <div id="walletAddress" class="mt-4 text-green-400"></div>
+## 🎁 Airdrop Disponible !
 
-    <button onclick="claimAirdrop()" class="bg-green-500 mt-4 px-6 py-2 rounded hover:bg-green-400">✅ Réclamer 100 EL</button>
+➡️ [Clique ici pour réclamer tes 100 EL gratuits](https://elcoin-airdrop.netlify.app)
 
-    <p class="text-sm mt-4">Ton lien de parrainage : <span id="refLink" class="underline text-blue-400 cursor-pointer"></span></p>
-  </div>
+Connecte ton wallet (MetaMask) et reçois automatiquement 100 EL.  
+Partage ton lien de parrainage pour gagner 25% en bonus !
 
-  <script>
-    let userAddress = '';
+---
 
-    async function connectWallet() {
-      if (window.ethereum) {
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        await provider.send("eth_requestAccounts", []);
-        const signer = provider.getSigner();
-        userAddress = await signer.getAddress();
-        document.getElementById("walletAddress").innerText = "✅ Connecté : " + userAddress;
-        document.getElementById("refLink").innerText = window.location.origin + "?ref=" + userAddress;
-      } else {
-        alert("Veuillez installer MetaMask.");
-      }
-    }
+## 🔗 Fonctionnalités à venir
 
-    function claimAirdrop() {
-      if (!userAddress) {
-        alert("Connecte ton wallet d'abord !");
-        return;
-      }
-      alert("🎉 Félicitations ! 100 EL seront envoyés à " + userAddress + " (simulation).");
-      // Ho apetraka amin'ny version finale: smart contract interaction
-    }
-  </script>
-
-</body>
-</html>
+- 💰 Staking ELCOIN (7–365 jours)
+- 📊 Dashboard interactif
+- 👛 Intégration complète de portefeuille
+- 🤝 Système de parrainage avancé
